@@ -43,7 +43,7 @@ public class ZookeeperApiTest {
         //3.开启客户端
         client.start();
         //4.创建临时节点
-        client.create().creatingParentsIfNeeded().withMode(CreateMode.EPHEMERAL).forPath("/name1", "world".getBytes());
+        client.create().creatingParentsIfNeeded().withMode(CreateMode.EPHEMERAL).forPath("/hahahah", "world".getBytes());
         //5.关闭客户端
         Thread.sleep(10000);
         client.close();

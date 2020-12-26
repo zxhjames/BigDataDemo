@@ -43,7 +43,7 @@ public class HdfsApiTest {
     //hdfs文件的遍历,获取根目录下面的
     public void listFiles() throws URISyntaxException, IOException, InterruptedException {
         //获取filesystem实例
-        FileSystem fileSystem = FileSystem.get(new URI("hdfs://node1:9000/"), new Configuration(),"root");
+        FileSystem fileSystem = FileSystem.get(new URI("hdfs://192.168.59.131:9000/"), new Configuration(),"root");
         //获取根目录下所有文件信息
         RemoteIterator<LocatedFileStatus> iterator = fileSystem.listFiles(new Path("/"), true);
         //遍历迭代器，获取相应的文件详情

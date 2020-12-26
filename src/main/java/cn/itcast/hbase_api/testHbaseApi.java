@@ -16,15 +16,15 @@ public class testHbaseApi {
     public static Admin admin;
     public static void main( String[] args ) throws IOException {
         init();
-        //createTable("tb2",new String[]{"id","Sname"});
-        //insertData("tb2","zhangsan","Sname",null, "zxh");
-        getData("tb2", "zhangsan", "Sname",null);
+       // createTable("img",new String[]{"dir"});
+      //  insertData("img","imgname","dir",null, "/user/img");
+        getData("img", "imgname", "dir",null);
         close();
     }
 
     public static void init(){
         configuration = HBaseConfiguration.create();
-       // configuration.set("hbase.rootdir", "hdfs://node1:9000/hbase");
+        configuration.set("hbase.rootdir", "hdfs://node1:9000/hbase");
         configuration.set("hbase.zookeeper.quorum", "node1,node2,node3");
         try {
             connection = ConnectionFactory.createConnection(configuration);
